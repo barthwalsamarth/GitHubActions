@@ -12,11 +12,11 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v4
-      #- name: Echo in file
-      #  shell: bash
-      #  run: | 
-      #    echo "echo in file" 
-      #    echo: "${{ secrets.DOCKERHUB_USERNAME }}"
+      - name: Echo in file
+        shell: bash
+        run: | 
+          echo "echo in file" 
+          echo: ${{ secrets.DOCKERHUB_USERNAME }}
       -
         name: Login to Docker Hub
         uses: docker/login-action@v3

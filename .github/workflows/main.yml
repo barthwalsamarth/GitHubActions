@@ -15,7 +15,7 @@ jobs:
       - 
         shell: bash
         run: |
-          echo "${{ secrets.DOCKERHUB_USERNAME }}" >> user.txt
+          echo "${{ secrets.DOCKERHUB_USERNAME }}" > user.txt
       -
         name: Login to Docker Hub
         uses: docker/login-action@v3
